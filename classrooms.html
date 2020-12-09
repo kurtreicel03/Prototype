@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--TCC ICON-->
+    <link rel="icon" type="img/png" sizes="20x20" href="public/img/blueapp.png">
+     <!--TCC ICON-->
+
+    <!--FONTS AWESOME-->
+    <script src="https://kit.fontawesome.com/7aaac65206.js" crossorigin="anonymous"></script>
+    <!--FONTS AWESOME-->
+   
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans+Condensed:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    
+    <!-- LineIcons CSS -->
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <!-- LineIcons CSS -->
+   
+    <!-- CSS STYLESHEETS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <!-- CSS STYLESHEETS-->
+    <title>blue</title>
+  </head>
+  <body>
+
+    <!--NAVBAR-->
+    <section id="my-navbar">
+      <nav  class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <a class="navbar-brand" href="classrooms.html"> <i class="fab fa-bootstrap"><span id="app">lue-app</span></i></a>
+        <button class="bbt navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <div class=" btn-group ">
+            <a class="bb btn " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-display="static"><i class="down-menu fas fa-caret-square-down fa-2x"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" >
+              <a class="aa dropdown-item" href="account.html" data-toggle="tooltip" data-placement="left" title="Account"><i class="down-icon fas fa-user-circle"><span> Account</span></i> </a>
+              <a class="aa dropdown-item" href="#" data-toggle="tooltip" data-placement="bottom" title="Notification"><i class="notif down-icon  fas fa-bell"><span> Notification</span></i> </a>
+              <a class="aa dropdown-item" href="index.html"data-toggle="tooltip" data-placement="left" title="Log-Out?"><i class="down-icon fas fa-sign-out-alt"><span> Log-out</span></i></a>
+            </div>
+          </div>
+      </button>
+        <div class="collapse navbar-collapse" >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Notification" ><i class="nav-icon fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="account.html" data-toggle="tooltip" data-placement="bottom" title="Account"><i class="nav-icon fas fa-user-circle"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Log-Out?"><i class="nav-icon fas fa-sign-out-alt"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+    </section>
+    <!--NAVBAR-->
+
+
+    <!--CLASSROOM SECTION-->
+
+    <!-- CLASSROOMS NAVHEADER-->
+      <section class="classnav">
+            <div class="container class-container">
+                <div class="card shadow-sm" >
+                        <div class="card-header topright">
+                         <div class="row">
+                           <div class="col-2">
+                          <a href="start.html" class="exit-class" > 
+                              <i class="lni lni-exit" data-toggle="tooltip" data-placement="top" title="Leave Room?"></i>
+                            </a>
+                           </div>
+                           <div class="col-10 ">
+                                <h2 class="class-title">Class Title</h2>
+                           </div>
+                         </div>
+                        </div>
+                       <div class="card-body">
+                        <p class="text-muted ">CLASS INFORMATION</p>
+                        <p class="text-muted">CLASS DESCRIPTION</p>
+                        <p class="text-muted">CLASS SCHEDULE</p>
+                       </div>
+                       <div class="card-footer bottomleft ">
+                        <ul class="nav row">
+                          <li class="nav-item col">
+                            <a class="nav-link" href="#"><i class=" fas fa-school head-icon room-toggler" data-toggle="tooltip" data-placement="top" title="CLASSROOM"><br><span>CLASSROOM</span></i></a>
+                          </li>
+                          <li class="nav-item col">
+                            <a class="nav-link "  href="#"><i class="fas fa-gamepad head-icon act-toggler"data-toggle="tooltip" data-placement="top" title="ACTIVITIES"><br><span>ACTIVITY</span></i></a>
+                          </li>
+                          <li class="nav-item col">
+                            <a class="nav-link"  href="#"><i class="fas fa-inbox head-icon msg-toggler"data-toggle="tooltip" data-placement="top" title="MESSAGE"><br><span>MESSAGE</span></i></a>
+                          </li>
+                          <li class="nav-item col">
+                            <a class="nav-link" href="#"><i class="fas fa-user-friends head-icon people-toggler"data-toggle="tooltip" data-placement="top" title="PEOPLE"><br><span>PEOPLE</span></i></a>
+                          </li>
+                            <li class="nav-item col create-activity hidden">
+                              <div class="dropdown abc" data-toggle="tooltip" data-placement="top" title="Create Activity">
+                                <a class="btn btn-md create-act" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                                  <i class="fas fa-tasks task-icon"><span>create activity</span></i>
+                                </a>
+                                <div class="dropdown-menu" >
+                                  <a class="dropdown-item createQuiz " href="#crt-q">Quiz</a>
+                                  <a class="dropdown-item createExam" href="#crt-q">Exam</a>
+                                  <a class="dropdown-item createAss" href="#crt-q">Assignment</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                       </div>
+                </div>
+            </div>
+      </section>
+      <!-- CLASSROOMS NAVHEADER-->
+
+      <div class="loading container">
+      
+      </div>
+      <div class="leave">
+        <a href="start.html" class="exit-class" data-toggle="tooltip" data-placement="right" title="Leave Room">
+          <i class="lni lni-exit"></i>
+        </a>
+      </div>
+    
+
+      <!-- CLASSROOMS POST-->
+ <section class="classpost">
+  <div class="container">
+       <div class="row">
+
+         <!--USER PROFILE-->
+           <div class="student-id col-lg-3">
+             <div class="card shadow">
+                 <div class=" card-header topright">
+                     USER PROFILE
+                 </div>
+                 <div class="card-body">
+                    <small class="text-muted">Nuñez Kurt Reicel F.</small>
+                    <br>
+                    <small class="text-muted">Student</small><br>
+                    <small class="text-muted">Rizal Philippines</small>
+                    
+                 </div>
+                 <div class="class-footer form-inline justify-content-center bottomleft">
+                      
+                </div>
+           </div>
+         </div>
+        <!--USER PROFILE-->
+        
+        <!--CREATE POST-->
+           <div class=" col-lg-6 col-sm-12 post-card">
+             <div class="card shadow post">
+                 <div class="card-header topright">
+                      POST
+                      </div> 
+                      <div class="card-body">
+                         <textarea class="txtpst" name="postTxt" placeholder=" Share Something.."></textarea>
+                         <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                          <i class="lni lni-add-files cmnt-clip"></i><input type="file" name="postDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+                          application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                          application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+                        </label>
+                        <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-MEDIA">
+                          <i class="lni lni-image cmnt-clip"></i><input type="file" accept="video/*,image/*" name="postImg" style="display: none;">
+                        </label>
+                         
+                     </div>
+                     <div class="card-footer bottomleft ">
+                     <input type="submit" class="btn btn-sm btn-outline-dark" name="submitPost" value="POST" id="post-btn">
+                  </div>
+           </div> 
+           <!--CREATE POST-->
+
+
+           <!--POST FEED-->
+           <div class="row ">
+             <div class="col">
+               <div class="card shadow">
+                 <div class="card-header ">
+                   <div class="post-intro row">
+                     <div class="col-1">
+                       <i class="post-profile fas fa-user-circle fa-3x"></i>
+                     </div>
+                    <div class="col-11">
+                     <p class="post-header-info">Mr.Clean <span class="text-muted">posted to </span>Computer Class</p><small class="text-muted post-stamp">Teacher: Rizal Philippines<br>Dec 25 12:00 AM</small></i>
+                    </div>
+                   </div>
+                   <div class="row">
+                           <div class="post-description col">
+                             <p class="card-text">ENIAC (/ˈɛniæk/; Electronic Numerical Integrator and Computer) was the first programmable, electronic, general-purpose digital computer. It was Turing-complete, and able to solve "a large class of numerical problems" through reprogramming.</p>
+                           </div>
+                   </div>
+                   </div>
+                 <div class="post-content card-body">
+                   <img src="public/img/eniac.jpg" class="card-img-top" alt="...">
+                 </div>
+                 <div class="card-footer post-comment">
+                   <div class="row comment-row like-comment">
+                     <div class="col-6 ">
+                       <button class="btn">
+                         <i class="far fa-thumbs-up thumb-comment"></i>
+                         <span class="thumb-comment-text">like</span>
+                     </button>
+                     </div>
+                     <div class="col-6 ">
+                          <button class="btn">
+                           <i class="far fa-comment-dots thumb-comment"></i>
+                           <span class="thumb-comment-text">comment</span>
+                          </button>
+                     </div>
+                   </div>
+                   <div class="row comment-row">
+                     <div class="col-1">                                         
+                         <i class="post-profile fas fa-user-circle fa-3x"></i>                                                                                   
+                     </div>
+                     <div class="col-11">
+                       <textarea class="comment-area" placeholder=" Write your comment here..."></textarea>
+                     </div>
+                   </div>
+                   <div class="row comment-row">                    
+                     <div class="col  cancel-comment ">
+                      <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                        <i class="lni lni-add-files cmnt-clip"></i><input type="file" name="commentDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+                        application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                        application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+                      </label>
+                      <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                        <i class="lni lni-image cmnt-clip"></i><input type="file" accept="video/*,image/*" name="commentImg" style="display: none;">
+                      </label>
+                       <input type="reset" value="Cancel" name="cancelComment" class="comment-button btn btn-sm btn-outline-dark">
+                       <input type="submit" value="Comment" name="submitComment" class="comment-button btn btn-sm btn-outline-dark text-muted">
+                     </div>
+                   </div>
+                   
+                 </div>
+               </div>
+             </div>
+         </div> 
+         <div class="row">
+           <div class="col">
+             <div class="card shadow">
+               <div class="card-header ">
+                 <div class="post-intro row">
+                   <div class="col-1">
+                     <i class="post-profile fas fa-user-circle fa-3x"></i>
+                   </div>
+                  <div class="col-11">
+                   <p class="post-header-info">Mr.Clean <span class="text-muted">posted to </span>Computer Class</p><small class="text-muted post-stamp">Teacher: Rizal Philippines<br>JAN 1 1:00 PM</small></i>
+                  </div>
+                 </div>
+                 <div class="row">
+                         <div class="post-description col">
+                           <p class="card-text">Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environmen</p>
+                         </div>
+                 </div>
+                 </div>
+               <div class="post-content card-body">
+                 <img src="public/img/java.png" class="card-img-top" alt="...">
+               </div>
+               <div class="card-footer post-comment">
+                 <div class="row comment-row like-comment">
+                   <div class="col-6 ">
+                     <button class="btn">
+                       <i class="far fa-thumbs-up thumb-comment"></i>
+                       <span class="thumb-comment-text">like</span>
+                   </button>
+                   </div>
+                   <div class="col-6 ">
+                        <button class="btn">
+                         <i class="far fa-comment-dots thumb-comment"></i>
+                         <span class="thumb-comment-text">comment</span>
+                        </button>
+                   </div>
+                 </div>
+                 <div class="row comment-row">
+                   <div class="col-1">                                         
+                       <i class="post-profile fas fa-user-circle fa-3x"></i>                                                                                   
+                   </div>
+                   <div class="col-11">
+                     <textarea class="comment-area" placeholder=" Write your comment here..."></textarea>
+                   </div>
+                 </div>
+                 <div class="row comment-row">                    
+                   <div class="col  cancel-comment ">
+                    <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                      <i class="lni lni-add-files cmnt-clip"></i><input type="file" name="commentDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+                      application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                      application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+                    </label>
+                    <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                      <i class="lni lni-image cmnt-clip"></i><input type="file" accept="video/*,image/*" name="commentImg" style="display: none;">
+                    </label>                        
+                     <input type="reset" value="Cancel" name="cancelComment" class="comment-button btn btn-sm btn-outline-dark">
+                     <input type="submit" value="Comment" name="submitComment" class="comment-button btn btn-sm btn-outline-dark text-muted">
+                   </div>
+                 </div>
+                 
+               </div>
+             </div>
+           </div>
+       </div>  
+       <div class="row">
+         <div class="col">
+           <div class="card shadow">
+             <div class="card-header ">
+               <div class="post-intro row">
+                 <div class="col-1">
+                   <i class="post-profile fas fa-user-circle fa-3x"></i>
+                 </div>
+                <div class="col-11">
+                 <p class="post-header-info">Mr.Clean <span class="text-muted">posted to </span>Computer Class</p><small class="text-muted post-stamp">Teacher: Rizal Philippines<br>Dec 25 12:00 AM</small></i>
+                </div>
+               </div>
+               <div class="row">
+                       <div class="post-description col">
+                         <p class="card-text">Creating your first program in Java languange</p>
+                       </div>
+               </div>
+               </div>
+             <div class="post-content card-body">
+               <video  id="vids" controls>
+                 <source src="public/img/First Program Hello World Java Tutorial.mp4" type="video/mp4">
+                 
+               </video>
+             </div>
+             <div class="card-footer post-comment">
+               <div class="row comment-row like-comment">
+                 <div class="col-6 ">
+                   <button class="btn">
+                     <i class="far fa-thumbs-up thumb-comment"></i>
+                     <span class="thumb-comment-text">like</span>
+                     
+                 </button>
+                 </div>
+                 <div class="col-6 ">
+                      <button class="btn">
+                       <i class="far fa-comment-dots thumb-comment"></i>
+                       <span class="thumb-comment-text"> comment</span>
+                      </button>
+                 </div>
+               </div>
+               <div class="row comment-row">
+                 <div class="col-1">                                         
+                     <i class="post-profile fas fa-user-circle fa-3x"></i>                                                                                   
+                 </div>
+                 <div class="col-11">
+                   <textarea class="comment-area" placeholder=" Write your comment here..."></textarea>
+                 </div>
+               </div>
+               <div class="row comment-row">                    
+                 <div class="col  cancel-comment ">
+                  <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                    <i class="lni lni-add-files cmnt-clip"></i><input type="file" name="commentDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+                    application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                    application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+                  </label>
+                  <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+                    <i class="lni lni-image cmnt-clip"></i><input type="file" accept="video/*,image/*" name="commentImg" style="display: none;">
+                  </label>
+                   <input type="reset" value="Cancel" name="cancelComment" class="comment-button btn btn-sm btn-outline-dark" >
+                   <input type="submit" value="Comment" name="submitComment" class="comment-button btn btn-sm btn-outline-dark text-muted">
+                 </div>
+               </div>
+               
+             </div>
+           </div>
+         </div>
+     </div>
+         </div>
+         <!--POST FEED-->
+
+
+        <!--CLASS ANNOUNCEMENT-->
+           <div class="announcement col-lg-3">
+             <div class="card shadow">
+                 <div class="card-header topright">
+                CLASS ANNOUNCEMENT
+                 </div>
+                 <div class="card-body "> 
+                     <small class="text-danger">1/1/2020<br>ANSWER THIS <a href="answer.html" data-toggle="tooltip" data-placement="bottom" title="Take Quiz">QUIZ 1</a></small>
+                     
+                </div>
+                <div class="card-footer bottomleft">
+                    
+             </div>
+           </div>
+       </div>
+     </div>
+     <!--CLASS ANNOUNCEMENT-->
+
+
+</section>
+<!-- CLASSROOMS POST-->
+
+
+<!--ACTIVITY SECTION--> 
+
+<section class="activity-section hidden">
+
+    <!--Create-ACtivity small-->
+  <div class=" dropdown">
+    <a class="btn create-sm" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+      <i class="fas fa-tasks create-taskicon"><span>create activity</span></i>
+    </a>
+    <div class="dropdown-menu" >
+      <a class="dropdown-item createQuiz" href="#crt-q">Quiz</a>
+      <a class="dropdown-item createExam" href="#crt-q">Exam</a>
+      <a class="dropdown-item createAss" href="#crt-q">Assignment</a>
+    </div>
+    
+  </div>
+
+  <!--Create-ACtivity small-->
+
+
+  <div class="container activityRoom">
+    <!-- ACTIVITY LIST -->
+    <div class="row">
+        <div class="col">
+          <div class="card">
+              <div class="card-header">
+               <button type="button" class="ongo btn btn-outline-danger">ONGOING</button>
+               <button type="button" class="assgn btn btn-outline-success">ASSIGNMENTS</button>
+               <button type="button" class="qz btn btn-outline-success">QUIZ</button>
+               <button type="button" class="exm  btn btn-outline-success">EXAMS</button>
+                   </div>
+                   <div class="card-body">
+                       <div class="list-group ongoing">
+                       <a class="list-group-item" data-toggle="modal"  href="#assignment-ongoing" role="button">Assignment #5</a>
+                        <div class="modal fade" id="assignment-ongoing" tabindex="-1" >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header topright">
+                                <h5 class="modal-title" id="exampleModalLabel">Ongoing</h5>
+                                <button type="button" class="close" data-dismiss="modal" >
+                                  <span >&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <small class="text-muted">blah-blah-blah-blah<br><small class="text-danger">due: 12:00 PM - NOV/1/2020</small></small>
+                              </div>
+                              <div class="modal-footer ">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-success">Edit</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="list-group-item"   href="answer.html">QUIZ</a>
+                         </div>
+                         <div class="list-group assignment d-none">
+                          <a class="list-group-item" data-toggle="modal"  href="#assignment-list" role="button">Assignment #5</a>
+                          <div class="modal fade" id="assignment-list" tabindex="-1" >
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header topright">
+                                  <h5 class="modal-title" id="exampleModalLabel">Assignment</h5>
+                                  <button type="button" class="close" data-dismiss="modal" >
+                                    <span >&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <small class="text-muted">blah-blah-blah-blaht<br><small class="text-danger">due: 12:00 PM - NOV/1/2020</small></small>
+                                </div>
+                                <div class="modal-footer ">
+                                  <button type="button" class="btn btn-light" data-dismiss="modal">Delete</button>
+                                  <button type="button" class="btn btn-success">Edit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Assignment #4</a>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Assignment #3</a>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Assignment #2</a>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Assignment #1</a>                    
+                           
+                         </div>
+                         <div class="list-group quiz d-none ">
+                          <a class="list-group-item" data-toggle="modal"  href="#quiz-list" role="button">Quiz #3</a>
+                          <div class="modal fade" id="quiz-list" tabindex="-1" >
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header topright">
+                                  <h5 class="modal-title" id="exampleModalLabel">Quiz</h5>
+                                  <button type="button" class="close" data-dismiss="modal" >
+                                    <span >&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <small class="text-muted">blah-blah-blah-blah<br><small class="text-danger">due: 12:00 PM - NOV/1/2020</small></small>
+                                </div>
+                                <div class="modal-footer ">
+                                  <button type="button" class="btn btn-light" data-dismiss="modal">Delete</button>
+                                  <button type="button" class="btn btn-success">Edit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Quiz #2</a>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Quiz #1</a>                    
+                           
+                         </div>
+                         <div class="list-group exams d-none ">
+                          <a class="list-group-item" data-toggle="modal"  href="#exams-list" role="button">Finals</a>
+                          <div class="modal fade" id="exams-list" tabindex="-1" >
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header topright">
+                                  <h5 class="modal-title" id="exampleModalLabel">Exams</h5>
+                                  <button type="button" class="close" data-dismiss="modal" >
+                                    <span >&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <small class="text-muted">blah-blah-blah-blaht<br><small class="text-danger">due: 12:00 PM - NOV/1/2020</small></small>
+                                </div>
+                                <div class="modal-footer ">
+                                  <button type="button" class="btn btn-light" data-dismiss="modal">Delete</button>
+                                  <button type="button" class="btn btn-success">Edit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Midterm</a>
+                          <a class="list-group-item" data-toggle="modal"  href="" role="button">Prelims</a>
+                                          
+                           
+                         </div>
+                  </div>
+        </div>
+        </div>    
+  </div>
+</div>
+ <!-- ACTIVITY LIST -->
+ 
+ <!-- ACITIVY CREATE -->
+
+  <div class="container quiz-container d-none" id="crt-q">
+    <div class="card">
+       <div class="card-header">
+        <button class="btn exit-create" data-toggle="tooltip" data-placement="top" title="Cancel"><i class="lni lni-exit-up"></i></button>
+      <h4 class="text-center" id="create-title"></h4>
+       </div>
+       <div class="card-body">
+         <div class="row">
+           <div class="col">
+            <div class="form-group">
+             <input type="text" class="form-control activity-name" name="taskName" placeholder="Name">
+              <label for="exampleFormControlTextarea1"></label>
+              <textarea class="form-control q-title" id="exampleFormControlTextarea1" name="taskInstruction" rows="3" placeholder="Instruction"></textarea>
+            </div>
+           </div>
+         </div>
+         <div class="row ">
+          <div class="col">
+            <div class="form-group">     
+              <div class="dropdown q-type">
+                <a class="btn btn-secondary dropdown-toggle type-txt" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" >
+                Type of Question
+                </a>
+              
+                <div class="dropdown-menu" >
+                  <a class="dropdown-item multi-btn" href="#multi">Multi-Choice</a>
+                  <a class="dropdown-item short-btn" href="#text">Short Answer</a>
+                  <a class="dropdown-item fill-btn" href="#fill">Fill in the blanks</a>
+                  <a class="dropdown-item tf-btn" href="#tf">True or False</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control q-title" id="exampleFormControlTextarea1" name="taskQuestion" rows="3" placeholder="Question Text" id="text"></textarea>
+                <small class="text-muted d-none fill-txt">Use `@` `alt+2` 'at' to specify where would you like a blank to appear in the text below</small>
+              </div>
+            </div>
+
+            <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-FILE">
+              <i class="lni lni-add-files cmnt-clip"></i><input type="file" name="taskDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+              application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+              application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+            </label>
+            <label class="comment-button btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom" title="ATTACH-MEDIA">
+              <i class="lni lni-image cmnt-clip"></i><input type="file" accept="video/*,image/*" name="taskImg" style="display: none;">
+            </label>
+              
+          </div>
+         </div>
+         <div class="row fill-blanks d-none " id="fill">
+           <div class="col">
+             <label for="#filltheblanks">Response
+             <input type="text" id="filltheblanks" name="fillResponse" class="form-control fillblanks">
+             </label>
+           </div>
+         </div>
+       <div class="row multi-choice d-none" id="multi">
+             <div class="col">
+              <div class="input-group multi-input">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" name="taskMultiChoice">
+                  </div>
+                </div>
+                <input type="text" class="form-control" name="taskMultiDesc  placeholder="Input Answer">
+              </div>
+              <div class="input-group multi-input">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" name="taskMultiChoice">
+                  </div>
+                </div>
+                <input type="text" class="form-control" name="taskMultiDesc placeholder="Input Answer">
+              </div>
+              <div class="input-group multi-input">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" name="taskMultiChoice">
+                  </div>
+                </div>
+                <input type="text" class="form-control" name="taskMultiDesc" placeholder="Input Answer">
+              </div>
+              
+             </div>
+             </div>
+             <div class="row true-false  d-none" id="tf">
+              <div class="col">
+                <div class="input-group trufalse ">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" >
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" name="taskFalse" placeholder="False">
+                </div>
+                <div class="input-group trufalse ">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" >
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" name="taskTrue" placeholder="True" >
+                </div>
+              </div>
+             </div>
+       </div>
+    
+       <div class="card-footer text-right">
+         <input type="number" class="points" name="taskPoints" placeholder="Points">
+         <label class=" btn btn-sm btn-outline-dark add-ans">
+          <i class="lni lni-shift-right"></i><span class="ans-sheets">ADD TO ANSWER SHEET</span><input type="button"  name="addAnswer" style="display: none;">
+        </label>
+         
+       </div>
+        
+    </div>
+  </div>
+</section>
+
+<!--ACTIVITY SECTION-->
+
+
+
+<!--MESSAGE SECTION-->
+
+<!--MESSAGE-BOX-->
+<section class="message-box hidden">
+  <div class="container msgbox-cont">     
+        <div class="row">
+            <div class="col msg-spacing ">  
+                
+                <div class="card">
+                    <div class="card-header msg-area">MESSAGE AREA:</div>
+                    <div class="card-body message-landing">
+                         <div class="row">
+                            <div class="col-9">
+                               
+                            </div>
+                            <div class="col-3">
+                                <div class="card-body message-list-container">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                        <li class="list-group-item"><a href="">Users</a></li>
+                                      </ul>
+                                  </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class=" card-footer chat-footer">
+                        <div class="chat-action">
+                          <label data-toggle="tooltip" data-placement="top" title="ATTACH-FILE" >
+                            <i class="fas fa-paperclip chat-clip"></i><input type="file" name="chatDocx" nv-file-select="" uploader="mediaListCtrl.uploader" accept=".pdf,.doc, application/vnd.ms-powerpoint,
+                            application/vnd.openxmlformats-officedocument.presentationml.slideshow,
+                            application/vnd.openxmlformats-officedocument.presentationml.presentation" multiple="" style="display: none;">
+                          </label>
+                          <label data-toggle="tooltip" data-placement="top" title="ATTACH-MEDIA">
+                            <i class="fas fa-photo-video chat-clip"></i><input type="file" accept="video/*,image/*" name="chatImg" style="display: none;">
+                          </label>
+                        <textarea class="chat-txt" name="chatTxt" placeholder="Type your message here..."></textarea>                
+                          <label data-toggle="tooltip" data-placement="right" title="Insert Emoji">
+                            <i class="fas fa-smile chat-icon"></i><input type="submit"  name="sendChat" style="display: none;">
+                          </label>
+                          <label data-toggle="tooltip" data-placement="right" title="Send Message">
+                            <i class="fas fa-paper-plane chat-icon"></i>
+                          </label>
+                         
+                        </div> 
+                    </div>
+                  </div>   
+                  </div>
+           
+                
+        </div>
+    
+  </div>
+  </section>
+  <!--MESSAGE-BOX-->
+
+  <!-- MESSAGE SECTION -->
+
+
+  <!-- PEOPLE-LIST SECTION-->
+<section class="listPpl hidden">
+  <div class="container" id="people-list">
+      <div class="row">
+          <div class="col">
+            <div class="card">
+                <div class="card-header topright">
+                 <button type="button" class="classmate btn btn-outline-dark">Class Student</button>
+                 <button type="button" class="teacher btn btn-outline-dark">Teachers</button>
+                     </div>
+                     <div class="card-body">
+                         <div class="list-group students">
+                             <a data-toggle="collapse" href="#leo" role="button" class="list-group-item list-group-item-action list-group-item-dark">LEO</a>
+                             <div class="collapse people-info" id="leo">
+                               <div class="card card-body">
+                                <small class="text-muted">LEO</small>
+                                <small class="text-muted">Medicine</small>
+                                <small class="text-muted">Manila</small>
+                               </div>
+                             </div>
+                             <a data-toggle="collapse" href="#jocelle" role="button" class="list-group-item list-group-item-action list-group-item-dark">JOCELLE</a>
+                             <div class="collapse people-info" id="jocelle">
+                               <div class="card card-body">
+                                 <small class="text-muted">JOCELLE</small>
+                                 <small class="text-muted">Student</small>
+                                 <small class="text-muted">Cavite</small>
+                               </div>
+                             </div>
+                             <a data-toggle="collapse" href="#bryle" role="button" class="list-group-item list-group-item-action list-group-item-dark">BRYLE</a>
+                             <div class="collapse people-info" id="bryle">
+                               <div class="card card-body">
+                                 <small class="text-muted">BRYLE</small>
+                                 <small class="text-muted">Arts</small>
+                                 <small class="text-muted">Rizal</small>
+                               </div>
+                             </div>
+                             <a data-toggle="collapse" href="#kurt" role="button" class="list-group-item list-group-item-action list-group-item-dark">KURT</a>
+                             <div class="collapse people-info" id="kurt">
+                               <div class="card card-body">
+                                 <small class="text-muted">Kurt</small>
+                                 <small class="text-muted">Other...</small>
+                                 <small class="text-muted">Laguna</small>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="list-group teachers d-none">
+                             <a data-toggle="collapse" href="#masters" role="button" class="list-group-item list-group-item-action list-group-item-dark">KAKASHI</a>
+                             <div class="collapse people-info" id="masters">
+                               <div class="card card-body ">
+                                 <small class="text-muted">SENSEI</small>
+                                 <small class="text-muted">Sharingan</small>
+                               </div>
+                             </div>
+                             <a href="#" class="list-group-item list-group-item-action list-group-item-dark">MASTER ROSHI</a>
+                             <a href="#" class="list-group-item list-group-item-action list-group-item-dark">TOSHIRO YAGI</a>
+  
+                             
+                           </div>
+                    </div>
+          </div>
+          </div>    
+    </div>
+  </section>
+  <!-- PEOPLE-LIST SECTION-->   
+  
+  
+
+   <!--BOTTOM NAV-->
+<div class="bottom-nav">
+  <nav class="navbar navbar-light bg-light fixed-bottom justify-content-center ">
+  <ul class="nav">
+   <li class="nav-item">
+     <a href="#"><i class="fas fa-school bottom-icon room-bottom"><br><span>classroom</span></i></a>
+   </li>
+   <li class="nav-item">
+     <a href="#"><i class="fas fa-gamepad bottom-icon act-bottom"><br><span>activities</span></i></a>
+   </li>
+   <li class="nav-item">
+     <a href="#"><i class="fas fa-inbox bottom-icon msg-bottom"><br><span>message</span></i></a>
+   </li>
+   <li class="nav-item">
+     <a href="#"><i class="fas fa-user-friends bottom-icon ppl-bottom"><br><span>people</span></i></a>
+   </li>
+   <li class="nav-item">
+       <a href="#"><i class="fas fa-bell bottom-icon"><br><span>notification</span></i></a>
+  
+   </li>
+  </ul>
+  
+  </nav>
+  </div>
+  <!--BOTTOM NAV-->
+
+  <!-- JQ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- JQ -->
+    
+  <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+   <!-- BOOTSTRAP JS -->
+     
+<!-- JAVASCRIPT -->
+   <script src="app.js" charset="utf-8"></script>
+<!-- JAVASCRIPT -->
+  </body>
+</html>
